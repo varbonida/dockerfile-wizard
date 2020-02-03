@@ -11,7 +11,7 @@ image_config: &image_config
   # NOTE: if you're modifying this config.yml file manually
   # rather than using the included setup script,
   # make sure you also add the values of your IMAGE_NAME & IMAGE_TAG variables
-  # to the `test_image` job (line 55)
+  # to the `test_image` job (line 55).
 
   LINUX_VERSION: UBUNTU_XENIAL
 
