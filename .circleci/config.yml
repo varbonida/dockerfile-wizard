@@ -4,7 +4,7 @@ image_config: &image_config
   # either as project-specific environment variables
   # or as resources in your organization's org-global Context
 
-  IMAGE_NAME: docker_custom
+  IMAGE_NAME: foxxy
 
   IMAGE_TAG: latest
 
@@ -21,11 +21,15 @@ image_config: &image_config
 
   PYTHON_VERSION_NUM: 3.8.1
 
-  JAVA: true
+  COMPOSE: true
+
+  FOXXY: true
+
+  JAVA: false
 
   MYSQL_CLIENT: false
 
-  POSTGRES_CLIENT: true
+  POSTGRES_CLIENT: false
 
   DOCKERIZE: true
 

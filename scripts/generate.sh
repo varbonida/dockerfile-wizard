@@ -132,3 +132,21 @@ RUN apt-get -y install libgconf-2-4 \
   && mv chromedriver /usr/local/bin/chromedriver \
   && chmod +x /usr/local/bin/chromedriver"
 fi
+
+if [ $COMPOSE = "true" ] ; then
+# DOCKERIZE_VERSION="v0.6.1"
+
+cat << EOF
+RUN sudo curl -L "https://github.com/docker/compose/releases/download/1.25.3/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose \\
+    && sudo chmod +x /usr/local/bin/docker-compose
+EOF
+fi
+
+if [ $FOXXY = "true" ] ; then
+# DOCKERIZE_VERSION="v0.6.1"
+
+cat << EOF
+RUN npm install foxxy -g \\
+    && npm install foxx-cli -g
+EOF
+fi
