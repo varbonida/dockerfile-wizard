@@ -137,8 +137,8 @@ if [ $COMPOSE = "true" ] ; then
 # DOCKERIZE_VERSION="v0.6.1"
 
 cat << EOF
-RUN sudo curl -L "https://github.com/docker/compose/releases/download/1.25.3/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose \\
-    && sudo chmod +x /usr/local/bin/docker-compose
+RUN curl -L "https://github.com/docker/compose/releases/download/1.25.3/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose \\
+    && chmod +x /usr/local/bin/docker-compose
 EOF
 fi
 
